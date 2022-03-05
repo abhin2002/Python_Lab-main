@@ -64,7 +64,7 @@ def sub_pallian():                                     # function to print palli
     for j in range(i+1,len(strg)+1):
       sub=strg[i:j]
       rev=sub[::-1]
-      if(sub==temp):
+      if(sub==rev):
         print(sub)
 
 
@@ -72,3 +72,4 @@ substring()
 sub_length()
 sub_length_distinct()
 sub_max_distinct()
+sub_pallian()
