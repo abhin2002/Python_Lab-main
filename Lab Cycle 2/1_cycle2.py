@@ -7,13 +7,13 @@ Original file is located at
     https://colab.research.google.com/drive/1RaQMx_cDAvd3QR6PjMUYwFTVs5mo0DP3
 """
 
-n=int(input('Enter the number of months : '))
+n=int(input('Enter the number of months : ')) #reading number of months
 a = 0
 b = 1
 c=0
 print("Month\t\tPairs")
-for i in range(1,n+1):
-  c = b
+for i in range(1,n+1):                        #calculating number of pair of rabbits
+  c = b                                       #it is fibinocci series
   b = a+b
   a = c
   print(i,"\t\t",a)

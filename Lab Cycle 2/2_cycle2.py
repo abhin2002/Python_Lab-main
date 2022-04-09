@@ -25,24 +25,25 @@ comprehen
 sion)
 """
 
-s = input(str('Enter the numbers : '))
+s = input(str('Enter the numbers : '))     #reading a string containing numbers separated by a space
 #s = '1 2 3 4 5 2 2 1'
-l = [int(i) for i in s.split()]
+l = [int(i) for i in s.split()]            #converting it as a list of integers and avoiding objects
 print(s)
 print(l) 
 k = int(input("Enter the 'k' position to rotate elements in a list : "))
 for i in range (k):
-  l.insert(0,l.pop())
+  l.insert(0,l.pop())                      #rotating elements k position to right
 print("Rotate elements in a list by 'k' position to the right : ",l)
-t = tuple([i for i in l])
+t = tuple([i for i in l])                  #convwrting to tuple using list comprehension
 print("Convert the list into a tuple using list comprehension : ",t)
-st = set(t)
+st = set(t)                                #remove all duplicates from the tuple
 print("Remove all duplicates from the tuple : ",st)
-l = list(st)
+l = list(st)                               #converting to list
 print("Remove all duplicates from the tuple and convert them into a list again : ",l)
-l2 = [((i**2)-i) for i in l]
+l2 = [((i**2)-i) for i in l]               #forming a list by evaluation of the function 𝑓(𝑥) = 𝑥2 – 𝑥 with each element in the final list
 print("Create another list by putting the results of the evaluation of the function 𝑓(𝑥) = 𝑥2 – 𝑥  : ",l2)
-l.sort()
+l.sort()             #sorting each list
 l2.sort()
-l3 = l + l2
+l3 = l + l2          #merging lists
+l3.sort()            #sorting list    
 print("Sorting them individually, merge the two lists to create a single sorted list : ",l3)
